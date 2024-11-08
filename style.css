@@ -33,6 +33,7 @@ body {
     align-items: center;
     gap: 1em;
     color: var(--text);
+    font-size: 1.25em;
 }
 
 .hero {
@@ -72,6 +73,20 @@ body {
 .elements .element h2 {
     font-size: clamp(10px, 5vw, 30px);
     margin: 0;
+    text-transform: uppercase;
+    transition: font-size 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.elements .element h2::after {
+    content: "";
+    display: block;
+    width: 50%;
+    margin: 0 auto 0.25em auto;
+    border-bottom: 2px solid var(--elements);
+}
+
+.elements .element h2:hover {
+    font-size: clamp(12px, 6vw, 38px);
 }
 
 .elements .element p {
