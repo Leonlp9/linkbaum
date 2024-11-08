@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+.hero {
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero img {
+    border-radius: 100%;
+    max-width: 200px;
+}
+
+body {
+    max-width: 600px;
+    margin: auto;
+    padding: 1em;
+}
+
+.elements {
+    margin-top: 3em;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+.elements .element {
+    max-width: 200px;
+    max-height: 200px;
+    color: white;
+    padding: 1em;
+    border-radius: 1.5em;
+    text-decoration: none;
+    background-position: center;
+    background-size: contain;
+    min-width: 150px;
+    text-align: center;
+    box-shadow: 0px 3px 20px 0px #0000009e;
+}
+
+#scenepacks {
+    background-image: url("images/scenepacks.webp");
+}
+
+#discord {
+    background-image: url("images/discord.webp");
+}
+
+#youtube {
+    background-image: url("images/youtube.webp");
+}
+
+#tiktok {
+    background-image: url("images/tiktok.webp");
+}
+
+#video {
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 3px 20px 0px #0000009e;
+}
