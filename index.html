@@ -11,8 +11,10 @@
         <meta property="og:type" content="website">
         <title>linkbaum</title>
         <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/8482ce4752.js" crossorigin="anonymous"></script>
     </head>
     <body>
+        <div id="theme-switch"></div>
 
         <div class="hero">
             <div id="profilePicture"></div>
@@ -70,8 +72,6 @@
             </a>
         </div>
 
-
-
         <div id="video"></div>
         <script>
             const channelId = 'UCBYnkgk7jCY8RbN4EIEX76g';
@@ -93,6 +93,38 @@
             }
 
             getLatestVideo();
+
+
+
+
+
+            let theme = localStorage.getItem('theme');
+            if (theme) {
+                setTheme(theme);
+            }else {
+                setTheme('dark');
+            }
+
+            function toggleTheme() {
+                if (theme === 'dark') {
+                    setTheme('light');
+                } else {
+                    setTheme('dark');
+                }
+            }
+
+            function setTheme(newTheme) {
+                document.documentElement.setAttribute('theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                theme = newTheme;
+
+                const themeSwitch = document.getElementById('theme-switch');
+                themeSwitch.innerHTML = newTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+                themeSwitch.setAttribute('title', `Switch to ${newTheme === 'dark' ? 'light' : 'dark'} mode`);
+                themeSwitch.setAttribute('aria-label', `Switch to ${newTheme === 'dark' ? 'light' : 'dark'} mode`);
+                themeSwitch.addEventListener('click', toggleTheme);
+            }
+
         </script>
     </body>
 </html>

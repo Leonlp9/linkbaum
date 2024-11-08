@@ -4,13 +4,39 @@
     font-family: "Poppins", sans-serif;
 }
 
+:root {
+    --background: #f0f0f0;
+    --text: #000;
+    --elements: #fff;
+    --shadow: #0000009e;
+}
+
+html[theme="dark"] {
+    --background: #121212;
+    --text: #FAF9F6;
+    --elements: #FAF9F6;
+    --shadow: #0000009e;
+}
+
 body {
+    background: var(--background);
     max-width: 900px;
     margin: auto;
     padding: 3em;
 }
 
+#theme-switch {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    color: var(--text);
+}
+
 .hero {
+    color: var(--text);
     margin-top: 5em;
     display: flex;
     flex-direction: column;
@@ -21,22 +47,22 @@ body {
     margin-top: 3em;
     display: grid;
     align-content: center;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 1em;
     width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(clamp(0px, 50%, 300px), 1fr));
 }
 
 .elements .element {
-    color: white;
+    color: var(--elements);
     padding: 1em;
     border-radius: 1.5em;
     text-decoration: none;
     background-position: center;
     background-size: cover;
     text-align: center;
-    box-shadow: 0px 3px 20px 0px #0000009e;
+    box-shadow: 0 3px 20px 0 var(--shadow);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,12 +70,21 @@ body {
 }
 
 .elements .element h2 {
-    font-size: 1.5em;
+    font-size: clamp(10px, 5vw, 30px);
+    margin: 0;
+}
+
+.elements .element p {
+    font-size: clamp(10px, 5vw, 15px);
     margin: 0;
 }
 
 h1 {
-    font-size: clamp(10px, 10vw, 50px);
+    font-size: clamp(15px, calc(5vw + 20px), 50px);
+}
+
+.hero p {
+    font-size: clamp(10px, 5vw, 20px);
 }
 
 #scenepacks {
@@ -73,7 +108,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0px 3px 20px 0px #0000009e;
+    box-shadow: 0 3px 20px 0 var(--shadow);
     border-radius: 1.5em;
     overflow: hidden;
 }
