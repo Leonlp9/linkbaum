@@ -4,6 +4,12 @@
     font-family: "Poppins", sans-serif;
 }
 
+body {
+    max-width: 900px;
+    margin: auto;
+    padding: 3em;
+}
+
 .hero {
     margin-top: 5em;
     display: flex;
@@ -11,37 +17,39 @@
     align-items: center;
 }
 
-.hero img {
-    border-radius: 100%;
-    max-width: 200px;
-}
-
-body {
-    max-width: 900px;
-    margin: auto;
-    padding: 1em;
-}
-
 .elements {
     margin-top: 3em;
-    display: flex;
+    display: grid;
     align-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 1em;
+    width: 100%;
 }
 
 .elements .element {
-    min-width: 300px;
-    min-height: 150px;
     color: white;
     padding: 1em;
     border-radius: 1.5em;
     text-decoration: none;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     text-align: center;
     box-shadow: 0px 3px 20px 0px #0000009e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.elements .element h2 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+h1 {
+    font-size: clamp(10px, 10vw, 50px);
 }
 
 #scenepacks {
@@ -66,4 +74,22 @@ body {
     flex-direction: column;
     align-items: center;
     box-shadow: 0px 3px 20px 0px #0000009e;
+    border-radius: 1.5em;
+    overflow: hidden;
+}
+
+#profilePicture{
+    background-image: url("images/channel.webp");
+    background-size: cover;
+    background-position: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+}
+
+#profilePicture img{
+    width: 110%;
+    height: 110%;
+    margin-left: -5%;
+    margin-top: -8%;
 }
