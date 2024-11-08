@@ -17,7 +17,7 @@
 }
 
 body {
-    max-width: 600px;
+    max-width: 900px;
     margin: auto;
     padding: 1em;
 }
@@ -32,15 +32,14 @@ body {
 }
 
 .elements .element {
-    max-width: 200px;
-    max-height: 200px;
+    min-width: 300px;
+    min-height: 150px;
     color: white;
     padding: 1em;
     border-radius: 1.5em;
     text-decoration: none;
     background-position: center;
     background-size: contain;
-    min-width: 150px;
     text-align: center;
     box-shadow: 0px 3px 20px 0px #0000009e;
 }
