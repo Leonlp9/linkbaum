@@ -85,7 +85,7 @@ body {
     border-bottom: 2px solid var(--elements);
 }
 
-.elements .element h2:hover {
+.elements .element:hover h2 {
     font-size: clamp(12px, 6vw, 38px);
 }
 
