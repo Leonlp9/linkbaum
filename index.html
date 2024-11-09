@@ -59,7 +59,7 @@
                         fetch(`https://discord.com/api/guilds/1129175632379662356/widget.json`).then(data => {
                             data.json().then(data => {
                                 //member count
-                                count.innerHTML = `${data.presence_count - 1} Members Online`;
+                                count.innerText = `${data.presence_count - 1} Members Online`;
                             });
                         });
                     });
